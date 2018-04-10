@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Place {
+public class Place implements Comparable<Place>{
     private String Name;
     private Integer PricePerDay;
     private Integer rating;
@@ -51,5 +51,13 @@ public class Place {
     // using this method
     public void addActivity(Activity a) {
         Activities.add(a);
+    }
+    @Override
+    public int compareTo(Place o) {
+        if (PricePerDay < o.PricePerDay) {
+            return 1;
+        } else {
+            return -1;
+        }
     }
 }

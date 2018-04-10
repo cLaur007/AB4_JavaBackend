@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class City {
+public class City implements Comparable<City>{
     private String Name;
     private ArrayList<Place> Places;
     private Float rating;
@@ -39,6 +40,16 @@ public class City {
     public void addPlace(Place p) {
         Places.add(p);
         CalculateRating();
+        Collections.sort(Places);
         // after every place added we have to recalculate the rating for this city
+    }
+
+    @Override
+    public int compareTo(City o) {
+        if (rating < o.rating) {
+            return 1;
+        } else {
+            return -1;
+        }
     }
 }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Country {
     private String Name;
@@ -28,5 +29,7 @@ public class Country {
     // The user can add places using this method
     public void addCity(City c) {
         Cities.add(c);
+        Collections.sort(Cities);
     }
+
 }
