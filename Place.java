@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Place {
     private String Name;
     private Integer PricePerDay;
+    private Integer rating;
     
     private ArrayList<Activity> Activities;
     
@@ -16,6 +18,9 @@ public class Place {
         for (int i = 0; i < acts.length; i++) {
             Activities.add(acts[i]);
         }
+        Random rand = new Random();
+        int  rat = rand.nextInt(50) + 1;
+        rating = rat;
     }
     // We have to construct some get functions to access the private fields
     public String getName() {
@@ -29,6 +34,11 @@ public class Place {
     public ArrayList<Activity> getActivities() {
         return Activities;
     }
+    
+    public Integer getRating() {
+        return rating;
+    }
+    
     // Also some set functions could be very usefull sometimes
     public void setName(String n) {
         Name = n;
