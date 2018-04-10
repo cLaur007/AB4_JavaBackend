@@ -32,5 +32,11 @@ despre aceasta.
 	Astfel ca aplicatia va printa pe ecran cele mai populare 5 orase, iar pentru fiecare
 dintre acestea cea mai ieftina locatie.
 
+
+*****
+	Aceasta ierarhie de clase poate fi usor impinsa mai departe de dumneavoastra
+spre exemplu incapsuland si tarile in continente, sau orasele in regiuni si asa mai departe....
+*****
+
 	
 	

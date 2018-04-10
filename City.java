@@ -7,11 +7,19 @@ public class City implements Comparable<City>{
     private Float rating;
     
     private void CalculateRating() {
+        /*
         rating = 0f;
         for (int i = 0; i < Places.size(); i++) {
             rating += Places.get(i).getRating();
         }
         rating /= Places.size();
+        That was an O(n) implementation but we can do better :
+        */
+        // We have to add just the latest rating so we can do sth like that:
+        rating *= (Places.size() - 1);
+        rating += Places.get(Places.size() - 1).getRating();
+        rating /= Places.size();
+        
     }
     
     public City(String n) {
