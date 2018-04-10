@@ -5,7 +5,7 @@ public class Place {
     private String Name;
     private Integer PricePerDay;
     
-    ArrayList<Activity> Activities;
+    private ArrayList<Activity> Activities;
     
     public Place(String n, Integer p, Activity[] acts) {
         // TODO Auto-generated constructor stub
@@ -36,5 +36,10 @@ public class Place {
     
     public void setPrice(Integer p) {
         PricePerDay = p;
+    }
+    // The user can add himself as many activities as he wants
+    // using this method
+    public void addActivity(Activity a) {
+        Activities.add(a);
     }
 }
